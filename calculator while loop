@@ -1,0 +1,42 @@
+while True:
+    f = int(input("Enter first number: "))
+    s = int(input("Enter second number: "))
+    act = input("Enter action(*,/,+,- ): ")
+    if act == "+":
+        result = f + s
+        print("Answer: ", result)
+        a = input("continue(continue(1), break(2))? ")
+        if a == "1":
+            continue
+        if a == "2":
+            break
+
+    if act == "-":
+        result = f - s
+        print("Answer: ", result)
+        a = input("continue(continue(1), break(2))? ")
+        if a == "1":
+        	 continue
+        if a == "2":
+        	break
+
+    if act == "/":
+        if s == 0:
+            print("Eror, you cannot divide by zero.")
+        else:
+            result = f // s
+            print("Answer: ", result)
+        a = input("continue(continue(1), break(2))? ")
+        if a == "1":
+            continue
+        if a == "2":
+        	break
+
+    if act == "*":
+        result = f * s
+        print("Answer: ", result)
+        a = input("continue(continue(1), break(2))? ")
+        if a == "1":
+        	continue
+        if a == "2":
+        	break
