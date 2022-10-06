@@ -1,0 +1,27 @@
+lang_EU ='ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ'
+lang_UA ='АБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЮЯЬАБВГҐДЕЄЖЗИІЇЙКЛМНОПРСТУФХЦЧШЩЮЯЬ'
+key = int(input('Ключ шифровки: '))
+message = input('Повідомлення для шифровки: ').upper()
+result = ''
+lang = input('Виберіть мову EU/UA/INT: ')
+if lang == 'EU':
+    for i in message:
+        place = lang_EU.find(i) #Вичисляємом місця символів в списку
+        new_place = place + key
+        if i in lang_EU:
+            result += lang_EU[new_place]
+        else:
+            result += i
+elif lang =='UA':
+    for i in message:
+        place = lang_UA.find(i) #Вичисляємом місця символів в списку
+        new_place =  place + key
+        if i in lang_UA:
+            result += lang_UA[new_place]
+        else:
+            result += i
+elif lang =='INT':
+    for i in message:
+        result = result + str(int(i) + key)
+
+print(result)
