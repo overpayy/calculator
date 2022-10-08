@@ -6,7 +6,7 @@ result = ''
 lang = input('Виберіть мову EU/UA/INT: ')
 if lang == 'EU':
     for i in message:
-        place = lang_EU.find(i) #Вичисляємом місця символів в списку
+        place = lang_EU.find(i)
         new_place = place + key
         if i in lang_EU:
             result += lang_EU[new_place]
@@ -14,7 +14,7 @@ if lang == 'EU':
             result += i
 elif lang =='UA':
     for i in message:
-        place = lang_UA.find(i) #Вичисляємом місця символів в списку
+        place = lang_UA.find(i)
         new_place =  place + key
         if i in lang_UA:
             result += lang_UA[new_place]
